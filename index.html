@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="CivicQuest turns local problem-solving into a community game." />
+    <title>CivicQuest | Make your block better</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar">
+        <a class="brand" href="#" aria-label="CivicQuest home">
+          <span class="brand-mark">✦</span>
+          <span>Civic<span class="brand-accent">Quest</span></span>
+        </a>
+        <p class="sidebar-label">Main menu</p>
+        <nav class="primary-nav" aria-label="Main navigation">
+          <button class="nav-item active" data-section="overview"><span>▦</span> Overview</button>
+          <button class="nav-item" data-section="explore"><span>⌖</span> Explore map</button>
+          <button class="nav-item" data-section="missions"><span>◒</span> Missions <b class="nav-count">3</b></button>
+          <button class="nav-item" data-section="community"><span>♧</span> Community</button>
+        </nav>
+        <p class="sidebar-label">Your progress</p>
+        <nav class="primary-nav" aria-label="Progress navigation">
+          <button class="nav-item" data-section="rewards"><span>♢</span> Rewards</button>
+          <button class="nav-item" data-section="badges"><span>✧</span> Badges</button>
+           </nav>
+        <div class="sidebar-bottom">
+          <div class="neighborhood-card">
+            <div class="mini-avatars"><span>AR</span><span>JM</span><span>SK</span><i>+12</i></div>
+            <strong>Maplewood crew</strong>
+            <small>Ranked #2 this week</small>
+            <div class="crew-progress"><span></span></div>
+            <small>1,280 / 1,500 pts to #1</small>
+          </div>
+          <button class="nav-item settings"><span>⚙</span> Settings</button>
+          <div class="profile">
+            <div class="avatar">AS</div>
+            <div><strong>Alex Stone</strong><small>Level 7 • Changemaker</small></div>
+            <button class="more-button" aria-label="More profile options">•••</button>
+          </div>
+        </div>
+      </aside>
+
+      <main class="main-content">
+        <header class="topbar">
+          <div class="mobile-brand"><span class="brand-mark">✦</span> Civic<span>Quest</span></div>
+          <div class="location"><span class="pin">⌖</span><div><small>YOUR NEIGHBORHOOD</small><strong>Maplewood, Portland <span>⌄</span></strong></div></div>
+          <div class="top-actions"><button class="icon-button" aria-label="Notifications">♢<i></i></button><div class="top-avatar">AS</div></div>
+        </header>
+
+        <div class="page-wrap">
+          <section class="welcome-row">
+            <div><p class="eyebrow">SATURDAY, MAY 18, 2024</p><h1>Good morning, Alex <span>✦</span></h1><p class="subhead">Small actions make a big difference. Ready to improve your block?</p></div>
+            <button class="report-button" id="open-report"><span>＋</span> Report an issue <kbd>R</kbd></button>
+          </section>
+
+          <section class="stats-grid" aria-label="Your civic stats">
+            <article class="stat-card primary-stat"><div class="stat-icon">✦</div><div><small>TOTAL POINTS</small><strong id="points-total">2,840</strong><p><span class="positive">↑ 240</span> this month</p></div><div class="sparkline"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div></article>
+            <article class="stat-card"><div class="stat-icon green">✓</div><div><small>ISSUES RESOLVED</small><strong>18</strong><p><span class="positive">↑ 4</span> this month</p></div></article>
+            <article class="stat-card"><div class="stat-icon yellow">♧</div><div><small>COMMUNITY RANK</small><strong>#12 <em>of 248</em></strong><p><span class="positive">↑ 6 places</span> this week</p></div></article>
+            <article class="stat-card"><div class="stat-icon purple">♢</div><div><small>REWARD BALANCE</small><strong id="reward-balance">1,240 <em>pts</em></strong><p><button class="text-link" data-section="rewards">View rewards →</button></p></div></article>
+          </section>
+
+          <div class="content-grid">
+            <section class="map-panel panel">
+              <div class="panel-heading"><div><h2>Issues near you</h2><p>Help make Maplewood a better place</p></div><button class="filter-button" id="filter-button">☷ Filters <span>3</span></button></div>
+              <div class="map-toolbar"><div class="map-legend"><span><i class="legend-dot orange"></i>Reported</span><span><i class="legend-dot blue"></i>In progress</span><span><i class="legend-dot green-dot"></i>Resolved</span></div><button class="near-me">⌖ Near me</button></div>
+              <div class="map" id="map">
+                <div class="road r1"></div><div class="road r2"></div><div class="road r3"></div><div class="road r4"></div><div class="road r5"></div>
+                <div class="block b1"></div><div class="block b2"></div><div class="block b3"></div><div class="block b4"></div><div class="block b5"></div><div class="block b6"></div>
+                <span class="map-label l1">MAPLE AVE</span><span class="map-label l2">FREMONT ST</span><span class="map-label l3">23RD AVE</span><span class="map-label l4">HAWTHORNE BLVD</span>
+                <button class="map-pin orange pin-1" data-title="Overflowing trash bin" aria-label="Overflowing trash bin">♟</button><button class="map-pin blue pin-2" data-title="Pothole on Maple Ave" aria-label="Pothole on Maple Ave">♟</button><button class="map-pin orange pin-3" data-title="Broken street light" aria-label="Broken street light">♟</button><button class="map-pin green-dot pin-4" data-title="Graffiti cleaned" aria-label="Graffiti cleaned">✓</button><button class="map-pin blue pin-5" data-title="Water leak reported" aria-label="Water leak reported">♟</button>
+                <div class="map-user"><span></span><b>You are here</b></div>
+                <div class="map-tooltip" id="map-tooltip"><strong>Overflowing trash bin</strong><small>Reported 2 hours ago • +50 pts</small></div>
+                <div class="map-controls"><button>＋</button><button>−</button><button>⌖</button></div>
+              </div>
+              <div class="map-footer"><span><b>24</b> active issues in your area</span><button class="text-link" data-section="explore">View all issues →</button></div>
+            </section>
+
+            <section class="side-column">
+              <article class="panel progress-panel"><div class="panel-heading"><div><h2>Level progress</h2><p>Keep going, Changemaker!</p></div><span class="level-badge">LVL 7</span></div><div class="level-row"><div class="level-number">7</div><div class="level-track"><div class="level-track-bar"><span></span></div><div class="level-labels"><span>2,840 pts</span><span>3,500 pts</span></div></div><div class="level-number muted">8</div></div><div class="next-reward"><span>♢</span><div><strong>Next reward: $5 coffee voucher</strong><small>660 pts to unlock</small></div><button class="arrow-button">→</button></div></article>
+              <article class="panel mission-panel"><div class="panel-heading"><div><h2>Quick missions</h2><p>Earn points while helping out</p></div><button class="dots">•••</button></div><div class="mission-list"><button class="mission"><span class="mission-icon camera">▣</span><span><strong>Report a civic issue</strong><small>Verified report</small></span><b>+50</b><i>›</i></button><button class="mission"><span class="mission-icon walk">♧</span><span><strong>Walk &amp; spot</strong><small>Complete a 15 min scan</small></span><b>+100</b><i>›</i></button><button class="mission"><span class="mission-icon people">♧</span><span><strong>Invite a neighbor</strong><small>Grow your crew</small></span><b>+150</b><i>›</i></button></div><button class="all-missions text-link" data-section="missions">See all missions →</button></article>
+            </section>
+          </div>
+
+          <div class="bottom-grid">
+            <section class="panel activity-panel"><div class="panel-heading"><div><h2>Recent activity</h2><p>Your impact in the community</p></div><button class="filter-select">This week⌄</button></div><div class="activity-list"><div class="activity"><span class="activity-icon resolved">✓</span><div><strong>Pothole report verified</strong><small>Maple Ave &amp; 23rd St • Today, 9:42 AM</small></div><b>+50 pts</b></div><div class="activity"><span class="activity-icon badge">✧</span><div><strong>Badge unlocked: Eyes on the ground</strong><small>Submitted 5 verified reports</small></div><b>+100 pts</b></div><div class="activity"><span class="activity-icon team">♧</span><div><strong>Joined Maplewood crew mission</strong><small>Neighborhood clean-up • Yesterday</small></div><b>+200 pts</b></div></div><button class="activity-footer text-link">View all activity →</button></section>
+            <section class="panel leaderboard-panel"><div class="panel-heading"><div><h2>Neighborhood leaderboard</h2><p>Maplewood crew is on a roll 🔥</p></div><button class="text-link" data-section="community">View all →</button></div><div class="leader-list"><div class="leader"><span class="rank gold">1</span><div class="leader-avatar avatar-one">JM</div><div><strong>Jordan Miller <span>♛</span></strong><small>Maplewood crew</small></div><b>3,420</b></div><div class="leader"><span class="rank silver">2</span><div class="leader-avatar avatar-two">SK</div><div><strong>Sam Kim</strong><small>Maplewood crew</small></div><b>3,110</b></div><div class="leader current"><span class="rank bronze">3</span><div class="leader-avatar avatar-three">AS</div><div><strong>You <span class="you-tag">YOU</span></strong><small>Maplewood crew</small></div><b>2,840</b></div></div><div class="leader-footer"><span>↗ <b>+6 places</b> since last week</span><span>Top 5 earn <b>2× points</b> this weekend</span></div></section>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <div class="modal-backdrop" id="report-modal" aria-hidden="true"><div class="modal" role="dialog" aria-modal="true" aria-labelledby="report-title"><button class="modal-close" id="close-report" aria-label="Close report dialog">×</button><div class="modal-icon">＋</div><p class="eyebrow">EARN 50+ POINTS</p><h2 id="report-title">Report a civic issue</h2><p class="modal-intro">Help your neighbors and city team take action faster.</p><form id="report-form"><label>What did you spot?<select id="issue-type" required><option value="">Select an issue type</option><option>Overflowing trash bin</option><option>Pothole or road damage</option><option>Broken street light</option><option>Water leak</option><option>Unsafe area</option></select></label><label>Where is it?<input id="issue-location" type="text" placeholder="e.g. Maple Ave &amp; 23rd St" required /></label><label>Add a note <span>(optional)</span><textarea id="issue-note" rows="2" placeholder="Tell us a little more..."></textarea></label><div class="upload-box">▧ <span>Add a photo <small>Clear photos help verify reports</small></span><button type="button">Browse</button></div><button class="submit-report" type="submit">Submit report <span>→</span></button></form><p class="form-success" id="form-success">✓ Report submitted! You earned <strong>50 points</strong>.</p></div></div>
+    <div class="toast" id="toast"><span>✦</span><div><strong>Nice work!</strong><small id="toast-message">You earned 50 points.</small></div></div>
+    <script src="app.js"></script>
+  </body>
+</html>
