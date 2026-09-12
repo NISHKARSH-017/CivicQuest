@@ -13,8 +13,8 @@ const defaultState = {
     avatar: 'CC',
     level: 1,
     badge: 'New Citizen',
-    neighborhood: 'Your City',
-    crew: 'Community',
+    neighborhood: 'Kathpadi',
+    crew: 'Vellore',
     crewRank: 0,
   },
 
