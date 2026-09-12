@@ -1,0 +1,347 @@
+:root {
+  --ink: #d7f6ff;
+  --muted: #7da3b8;
+  --line: #12384e;
+  --green: #16d9ff;
+  --soft: #082f47;
+  --bg: #030a13;
+}
+
+body {
+  background: radial-gradient(circle at 70% -15%, #123f64 0, #030a13 48%), #030a13;
+  color: var(--ink);
+}
+
+body::before {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background:
+    linear-gradient(#16d9ff0b 1px, transparent 1px),
+    linear-gradient(90deg, #16d9ff0b 1px, transparent 1px);
+  background-size: 38px 38px;
+  content: "";
+  mask-image: linear-gradient(to bottom, #000, transparent 80%);
+}
+
+.sidebar,
+header,
+.stats article,
+.panel {
+  background: linear-gradient(145deg, #081a29ef, #06111cef);
+  border-color: #15516b;
+  box-shadow: 0 0 0 1px #16d9ff08, 0 14px 40px #000b1e99;
+}
+
+.logo,
+.place span,
+.profile {
+  color: var(--ink);
+}
+
+.logo b {
+  background: #075d92;
+  box-shadow: 0 0 18px #16d9ff99;
+}
+
+.logo span,
+.mobile-logo span {
+  color: var(--green);
+}
+
+.section-label,
+.stats small,
+.heading p,
+.welcome small {
+  color: #5d8da5;
+}
+
+.sidebar nav button {
+  color: #76a5ba;
+}
+
+.sidebar nav button:first-child {
+  background: #083653;
+  color: var(--green);
+  box-shadow: inset 3px 0 #16d9ff, 0 0 18px #16d9ff22;
+}
+
+.sidebar nav i {
+  background: #0b516e;
+  color: var(--green);
+}
+
+.crew {
+  background: #062337;
+  border-color: #14556e;
+}
+
+.faces b,
+.faces i {
+  border-color: #062337;
+  background: #0c4b63;
+  color: #a5ecff;
+}
+
+.faces i {
+  background: #092b40;
+}
+
+.meter {
+  background: #0d3b4f;
+}
+
+.meter i {
+  background: var(--green);
+  box-shadow: 0 0 10px #16d9ff;
+}
+
+.profile > b,
+.top-avatar {
+  background: #0a4660;
+  color: #a8efff;
+}
+
+.welcome h1 {
+  color: #e6fbff;
+  text-shadow: 0 0 22px #16d9ff44;
+}
+
+.welcome h1 em {
+  color: var(--green);
+}
+
+.welcome p {
+  color: var(--muted);
+}
+
+#report,
+.submit {
+  background: linear-gradient(100deg, #0875b8, #16d9ff);
+  color: #00121d;
+  box-shadow: 0 0 20px #16d9ff66;
+  text-transform: uppercase;
+  font-size: 11px;
+  letter-spacing: 0.4px;
+}
+
+.stats article > b {
+  background: #073c58;
+  color: var(--green);
+  box-shadow: inset 0 0 12px #16d9ff33;
+}
+
+.stats .green {
+  color: var(--green);
+}
+
+.antigravity {
+  background: radial-gradient(circle at 70% 45%, #096b9b 0, #062f50 28%, #03111f 72%);
+  border-color: #16d9ff;
+  box-shadow: 0 0 0 1px #16d9ff22, 0 0 45px #087bb855, inset 0 0 70px #16d9ff22;
+}
+
+.antigravity::after {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: repeating-linear-gradient(0deg, transparent 0 3px, #16d9ff0a 4px);
+  content: "";
+}
+
+.scene-copy > small {
+  color: var(--green) !important;
+}
+
+.scene-copy h2 span {
+  color: var(--green);
+}
+
+.scene-copy p {
+  color: #8dc1d3;
+}
+
+.scene-copy button {
+  border-color: var(--green);
+  color: var(--green);
+  box-shadow: 0 0 15px #16d9ff55;
+}
+
+.orbit-label {
+  border-color: var(--green);
+  background: #042e46dd;
+  color: var(--green);
+  box-shadow: 0 0 22px #16d9ff99;
+}
+
+.scene-hint {
+  color: #599bb7;
+}
+
+.heading button {
+  border-color: #17516a;
+  color: #75a6ba;
+}
+
+.map {
+  background: #062536;
+  box-shadow: inset 0 0 35px #16d9ff22;
+}
+
+.grid-lines {
+  opacity: 0.5;
+}
+
+.road {
+  background: #0e4c64;
+}
+
+.map-name {
+  color: #50a4c0;
+}
+
+.map-pin {
+  border-color: #9df5ff;
+  box-shadow: 0 0 14px #16d9ff99;
+}
+
+.orange {
+  background: #ff3da8;
+}
+
+.blue {
+  background: #16b9ff;
+}
+
+.green {
+  background: #16d9ff;
+  color: #00121d;
+}
+
+.progress .heading > b {
+  background: #073e59;
+  color: var(--green);
+}
+
+.level span i {
+  background: #0a3a50;
+}
+
+.level span i::before {
+  background: var(--green);
+  box-shadow: 0 0 12px #16d9ff;
+}
+
+.level > strong {
+  background: var(--green);
+  color: #00121d;
+  box-shadow: 0 0 13px #16d9ff;
+}
+
+.level > strong:last-child {
+  background: #0d3448;
+  color: #75a6ba;
+}
+
+.level small,
+.reward small {
+  color: #6f9ab0;
+}
+
+.reward {
+  background: #102e43;
+  color: #ff3da8;
+}
+
+.reward span,
+.reward strong {
+  color: #b7eaff;
+}
+
+.missions > button {
+  border-color: #12384e;
+}
+
+.missions > button > b {
+  background: #073e59;
+  color: var(--green);
+}
+
+.missions button small {
+  color: #7199ac;
+}
+
+.missions button em,
+.map-panel footer a,
+.activity > a,
+.missions > a,
+.leaderboard a {
+  color: var(--green);
+}
+
+.activity > p,
+.leaderboard > p {
+  border-color: #12384e;
+}
+
+.leaderboard .you {
+  border-color: #16d9ff;
+  background: #07334b;
+}
+
+.leaderboard small {
+  background: #0c6179;
+  color: #a9f6ff;
+}
+
+.modal-bg {
+  background: #010914d9;
+}
+
+.modal-bg form {
+  background: #071a2a;
+  border-color: #16d9ff;
+  box-shadow: 0 0 50px #16d9ff55;
+}
+
+.modal-icon {
+  background: #073e59;
+  color: var(--green);
+}
+
+.modal-bg p,
+.modal-bg label {
+  color: #8bb5c5;
+}
+
+.modal-bg input,
+.modal-bg select,
+.modal-bg textarea {
+  background: #04121f;
+  border-color: #14516a;
+  color: var(--ink);
+}
+
+.success {
+  background: #073e59;
+  color: var(--green);
+}
+
+.toast {
+  background: #062b42;
+  border: 1px solid #16d9ff;
+  box-shadow: 0 0 22px #16d9ff66;
+}
+
+.toast small {
+  color: #8fdded;
+}
+
+.panel {
+  transform-style: preserve-3d;
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+
+.panel:hover {
+  box-shadow: 0 18px 45px #000b2b, 0 0 22px #16d9ff2b;
+}
