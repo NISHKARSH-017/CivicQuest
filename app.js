@@ -28,7 +28,7 @@ router.register('missions', (container) => {
     subtitle: 'Join neighborhood cleanup crews, spot hazards, and complete crew challenges.',
     icon: '◒',
     badge: 'ASSIGNED TO TEAMMATE',
-    description: 'This page will be built by our teammate. It will showcase active Maplewood crew missions, verification tasks, and cooperative community objectives.',
+    description: 'This page will be built by our teammate. It will showcase active Vellore crew missions, verification tasks, and cooperative community objectives.',
     filename: 'missionsPage.js',
     routeName: 'missions',
   });
@@ -38,10 +38,10 @@ router.register('missions', (container) => {
 router.register('leaderboard', (container) => {
   renderPlaceholderPage(container, {
     title: 'Neighborhood Leaderboard',
-    subtitle: 'See Maplewood community standings, top contributors, and neighborhood crew rankings.',
+    subtitle: 'See Vellore community standings, top contributors, and neighborhood crew rankings.',
     icon: '🏆',
     badge: 'ASSIGNED TO TEAMMATE',
-    description: 'This page will be built by our teammate. It will feature weekly leaderboards, street-by-street rankings, and contributor streaks across Portland.',
+    description: 'This page will be built by our teammate. It will feature weekly leaderboards, street-by-street rankings, and contributor streaks across Vellore.',
     filename: 'leaderboardPage.js',
     routeName: 'leaderboard',
   });
