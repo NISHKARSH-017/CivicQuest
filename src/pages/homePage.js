@@ -157,7 +157,7 @@ export function renderHomePage(container) {
       <!-- 5. 3D Antigravity City Feature Scene -->
       <section class="antigravity panel">
         <div class="scene-copy">
-          <small>ANTIGRAVITY CITY · MAPLEWOOD DISTRICT</small>
+          <small>ANTIGRAVITY CITY · VELLORE DISTRICT</small>
           <h2>Turn good deeds<br>into <span>real change.</span></h2>
           <p>Interactive 3D simulation of civic activity, public infrastructure, and active missions.</p>
           <button id="launch-3d" class="btn btn-secondary">✦ Enter 3D View</button>
@@ -278,7 +278,7 @@ export function renderHomePage(container) {
           <div class="heading">
             <span>
               <h2>Neighborhood leaderboard</h2>
-              <p>Maplewood crew is on a roll 🔥</p>
+              <p>Vellore crew is on a roll 🔥</p>
             </span>
             <a href="#/leaderboard" class="view-lead-link">View all →</a>
           </div>
