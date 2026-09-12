@@ -8,7 +8,7 @@ Punk-blue 3D civic engagement app with a persistent Express + SQLite backend.
 npm install
 npm start
 ```
-Open https://phenomenal-lollipop-5d2ea8.netlify.app
+Open https://deft-bienenstitch-1bb55e.netlify.app
 ## API
 
 - `GET /api/health`
