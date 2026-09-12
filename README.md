@@ -8,8 +8,7 @@ Punk-blue 3D civic engagement app with a persistent Express + SQLite backend.
 npm install
 npm start
 ```
-
-Open localhost:3000
+Open http://localhost:3000/#/home
 
 ## API
 
