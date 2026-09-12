@@ -1,33 +1,84 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>CivicQuest | Antigravity City</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CivicQuest | Citizen Tech Platform</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css"><link rel="stylesheet" href="theme.css">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="theme.css">
+  <link rel="stylesheet" href="src/styles/reporting.css">
 </head>
 <body>
   <div class="app">
-    <aside class="sidebar"><a class="logo" href="#"><b>✦</b>Civic<span>Quest</span></a>
+    <!-- Left Navigation Sidebar -->
+    <aside class="sidebar">
+      <a class="logo" href="#/home" data-route="home"><b>✦</b>Civic<span>Quest</span></a>
+      
       <small class="section-label">MAIN MENU</small>
-      <nav><button class="active">▦ <span>Overview</span></button><button>⌖ <span>Explore map</span></button><button>◒ <span>Missions</span><i>3</i></button><button>♧ <span>Community</span></button></nav>
-      <small class="section-label">YOUR PROGRESS</small><nav><button>♢ <span>Rewards</span></button><button>✧ <span>Badges</span></button></nav>
-      <div class="crew"><div class="faces"><b>AR</b><b>JM</b><b>SK</b><i>+12</i></div><strong>Maplewood crew</strong><small>Ranked #2 this week</small><div class="meter"><i></i></div><small>1,280 / 1,500 pts to #1</small></div>
-      <nav class="bottom"><button>⚙ <span>Settings</span></button></nav><div class="profile"><b>AS</b><span><strong>Alex Stone</strong><small>Level 7 · Changemaker</small></span>•••</div>
-    </aside>
-    <main><header><div class="mobile-logo">✦ Civic<span>Quest</span></div><div class="place">⌖ <span><small>YOUR NEIGHBORHOOD</small><strong>Maplewood, Portland⌄</strong></span></div><div class="top-avatar">AS</div></header>
-      <div class="wrap"><section class="welcome"><div><small>SATURDAY, MAY 18, 2024</small><h1>Good morning, Alex <em>✦</em></h1><p>Small actions make a big difference. Ready to improve your block?</p></div><button id="report">＋ Report an issue <kbd>R</kbd></button></section>
-        <section class="stats"><article><b>✦</b><span><small>TOTAL POINTS</small><strong id="points">2,840</strong><small class="green">↑ 240 this month</small></span></article><article><b>✓</b><span><small>ISSUES RESOLVED</small><strong>18</strong><small class="green">↑ 4 this month</small></span></article><article><b>♧</b><span><small>COMMUNITY RANK</small><strong>#12 <small>of 248</small></strong><small class="green">↑ 6 places this week</small></span></article><article><b>♢</b><span><small>REWARD BALANCE</small><strong id="balance">1,240 <small>pts</small></strong><small class="green">View rewards →</small></span></article></section>
-        <section class="antigravity panel"><div class="scene-copy"><small>ANTIGRAVITY CITY</small><h2>Turn good deeds<br>into <span>real change.</span></h2><p>Explore your neighborhood in 3D, complete missions, and lift your community higher.</p><button id="launch">✦ Enter 3D view</button></div><canvas id="city3d" aria-label="Interactive 3D antigravity city"></canvas><div class="orbit-label label-a">+50 <small>REPORT</small></div><div class="orbit-label label-b">+100 <small>MISSION</small></div><div class="scene-hint">DRAG TO EXPLORE · SCROLL TO ZOOM</div></section>
-        <div class="columns"><section class="panel map-panel"><div class="heading"><span><h2>Issues near you</h2><p>Help make Maplewood a better place</p></span><button>☷ Filters <i>3</i></button></div><div class="map"><div class="grid-lines"></div><span class="road road-a"></span><span class="road road-b"></span><span class="road road-c"></span><button class="map-pin orange" style="left:24%;top:39%">●</button><button class="map-pin blue" style="left:68%;top:23%">●</button><button class="map-pin orange" style="left:46%;top:69%">●</button><button class="map-pin green" style="left:78%;top:54%">✓</button><small class="map-name">MAPLE AVE</small><small class="map-name two">FREMONT ST</small></div><footer><span><b>24</b> active issues in your area</span><a>View all issues →</a></footer></section>
-          <div class="right"><section class="panel progress"><div class="heading"><span><h2>Level progress</h2><p>Keep going, Changemaker!</p></span><b>LVL 7</b></div><div class="level"><strong>7</strong><span><i></i><small>2,840 pts <em>3,500 pts</em></small></span><strong>8</strong></div><div class="reward">♢ <span><strong>Next reward: $5 coffee voucher</strong><small>660 pts to unlock</small></span>→</div></section><section class="panel missions"><div class="heading"><span><h2>Quick missions</h2><p>Earn points while helping out</p></span><b>•••</b></div><button><b>▣</b><span><strong>Report a civic issue</strong><small>Verified report</small></span><em>+50　›</em></button><button><b>♧</b><span><strong>Walk & spot</strong><small>Complete a 15 min scan</small></span><em>+100　›</em></button><button><b>♧</b><span><strong>Invite a neighbor</strong><small>Grow your crew</small></span><em>+150　›</em></button><a>See all missions →</a></section></div></div>
-        <div class="bottom-grid"><section class="panel activity"><div class="heading"><span><h2>Recent activity</h2><p>Your impact in the community</p></span><button>This week⌄</button></div><p>✓　<strong>Pothole report verified</strong><small>Maple Ave & 23rd St · Today, 9:42 AM</small><b>+50 pts</b></p><p>✧　<strong>Badge unlocked: Eyes on the ground</strong><small>Submitted 5 verified reports</small><b>+100 pts</b></p><p>♧　<strong>Joined Maplewood crew mission</strong><small>Neighborhood clean-up · Yesterday</small><b>+200 pts</b></p><a>View all activity →</a></section><section class="panel leaderboard"><div class="heading"><span><h2>Neighborhood leaderboard</h2><p>Maplewood crew is on a roll 🔥</p></span><a>View all →</a></div><p>1　🟠　<strong>Jordan Miller</strong><b>3,420</b></p><p>2　🟢　<strong>Sam Kim</strong><b>3,110</b></p><p class="you">3　🟣　<strong>You <small>YOU</small></strong><b>2,840</b></p><footer>↗ <b>+6 places</b> since last week</footer></section></div>
+      <nav>
+        <button class="nav-item active" data-route="home">▦ <span>Overview</span></button>
+        <button class="nav-item" data-route="report">＋ <span>Report Issue</span></button>
+        <button class="nav-item" data-route="missions">◒ <span>Missions</span><i>3</i></button>
+        <button class="nav-item" data-route="leaderboard">♧ <span>Community</span></button>
+      </nav>
+
+      <small class="section-label">YOUR IMPACT & REWARDS</small>
+      <nav>
+        <button class="nav-item" data-route="wallet">♢ <span>Impact Wallet</span></button>
+        <button class="nav-item" data-route="wallet">✧ <span>Badges</span></button>
+      </nav>
+
+      <!-- Neighborhood Crew Box -->
+      <div class="crew">
+        <div class="faces"><b>AR</b><b>JM</b><b>SK</b><i>+12</i></div>
+        <strong>Maplewood crew</strong>
+        <small>Ranked #2 this week</small>
+        <div class="meter"><i></i></div>
+        <small>1,280 / 1,500 pts to #1</small>
       </div>
+
+      <nav class="bottom">
+        <button class="nav-item" data-route="home">⚙ <span>Settings</span></button>
+      </nav>
+
+      <!-- User Profile Box -->
+      <div class="profile" id="sidebar-profile">
+        <b>AS</b>
+        <span>
+          <strong id="sidebar-user-name">Alex Stone</strong>
+          <small id="sidebar-user-badge">Level 7 · Civic Champion</small>
+        </span>
+        •••
+      </div>
+    </aside>
+
+    <!-- Main Application Viewport -->
+    <main>
+      <header>
+        <div class="mobile-logo" data-route="home">✦ Civic<span>Quest</span></div>
+        <div class="place">
+          ⌖ <span><small>YOUR NEIGHBORHOOD</small><strong>Maplewood, Portland ⌄</strong></span>
+        </div>
+        <button class="btn btn-primary" data-route="report" style="padding: 8px 16px; font-size: 11px;">
+          ＋ Report Issue <kbd>R</kbd>
+        </button>
+        <div class="top-avatar" title="Alex Stone - Level 7 Civic Champion">AS</div>
+      </header>
+
+      <!-- Dynamic View Container managed by router -->
+      <div id="view-container"></div>
     </main>
   </div>
-  <div class="modal-bg" id="modal"><form><button type="button" class="close">×</button><div class="modal-icon">＋</div><small>EARN 50+ POINTS</small><h2>Report a civic issue</h2><p>Help your neighbors and city team take action faster.</p><label>What did you spot?<select required><option value="">Select an issue type</option><option>Pothole or road damage</option><option>Overflowing trash bin</option><option>Broken street light</option><option>Water leak</option></select></label><label>Where is it?<input required placeholder="e.g. Maple Ave & 23rd St"></label><label>Add a note <em>(optional)</em><textarea rows="2"></textarea></label><button class="submit">Submit report →</button><div class="success">✓ Report submitted! You earned <b>50 points</b>.</div></form></div>
-  <div class="toast" id="toast">✦ <span><b>Nice work!</b><small>You earned 50 points.</small></span></div>
+
+  <!-- Toast Notification Shell -->
+  <div class="toast" id="toast">
+    ✦ <span><b id="toast-title">Nice work!</b><small id="toast-desc">You earned 10 Civic Coins.</small></span>
+  </div>
+
+  <!-- Application Entry Point -->
   <script type="module" src="app.js"></script>
 </body>
 </html>
