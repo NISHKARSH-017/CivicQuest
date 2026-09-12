@@ -19,7 +19,7 @@ export function renderHomePage(container) {
       <section class="welcome dashboard-welcome">
         <div>
           <small class="today-date">TODAY IN MAPLEWOOD, PORTLAND</small>
-          <h1>Good morning, ${state.user.name.split(' ')[0]} <em>✦</em></h1>
+          <h1>Hello! ${state.user.name.split(' ')[0]} <em>✦</em></h1>
           <p>You are a <strong class="badge-highlight">${state.user.badge}</strong>. Small local actions make a big neighborhood difference.</p>
         </div>
         <button class="btn btn-primary hero-report-btn" id="hero-report-btn">
