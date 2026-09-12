@@ -8,8 +8,7 @@ Punk-blue 3D civic engagement app with a persistent Express + SQLite backend.
 npm install
 npm start
 ```
-Open https://localhost:3000/#/home
-
+Open https://resonant-alpaca-8ddf04.netlify.app
 ## API
 
 - `GET /api/health`
